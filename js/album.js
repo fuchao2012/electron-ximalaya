@@ -37,6 +37,7 @@ function renderAlbum(album) {
     var albumInfo = album.album;
     var tracks = album.tracks.list;
 
+    $('#app-title').text(albumInfo.title);
     $('#img-cover').attr('src', albumInfo.coverOrigin);
     $('#title').contents().first().replaceWith(albumInfo.title);
     $('#nick-name').text(albumInfo.nickname);
@@ -51,14 +52,15 @@ function renderAlbum(album) {
                 <a id="play-title-${play_id}" class="title">${e.title}</a>
             </li>`);
         $(`#play-icon-${play_id}`).click(function () {
-            play(e.playPathAacv224);
+            play(e.playPathAacv224, `${albumInfo.title} - ${e.title}`);
         });
         $(`#play-title-${play_id}`).click(function () {
-            play(e.playPathAacv224);
+            play(e.playPathAacv224, `${albumInfo.title} - ${e.title}`);
         });
     });
 }
 
-function play(url) {
+function play(url, title) {
     $('#audio-player').attr('src', url).trigger('play');
+    $('#app-title').text(title);
 }
