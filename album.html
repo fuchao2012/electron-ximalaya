@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+<link href="zui/css/zui.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <title>Album</title>
+</head>
+<body>
+    <div class="container">
+        <!--player-->
+        <div id="player" class="row">
+            <div class="cover">
+                <img id="img-cover" class="img-rounded" src="img/cover.jpeg">
+            </div>
+            <div class="col-xs-9">
+                <div class="container">
+                    <div class="row">
+                        <h1 id="title">十年 <small id="nick-name">1997-2007 跨世纪国语精选</small></h1>
+                    </div>
+                    <div class="row">
+                        <audio controls id="audio-player" src=""></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container song-list">
+                <ul id="mini-player-list" class="row mini-player">
+                    <li>
+                        <a class="play-button"><i class="icon icon-play"></i></a>
+                        <a class="title">K歌之王</a>
+                    </li>
+                    <li>
+                        <a class="play-button"><i class="icon icon-play"></i></a>
+                        <a class="title">淘汰</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    <script src="zui/js/zui.min.js"></script>
+    <script>
+        require('./js/album')
+    </script>
+</body>
+</html>

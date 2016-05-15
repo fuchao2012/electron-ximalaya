@@ -1,0 +1,35 @@
+.cover {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 5px 0 0 5px;
+}
+
+#audio-player {
+    margin-top: 16px;
+}
+
+.song-list {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.mini-player {
+    padding: 5px;
+}
+
+.mini-player li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #EEE;
+}
+
+.mini-player .play-button {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+.mini-player .title {
+    cursor: pointer;
+    margin-left: 10px;
+}
