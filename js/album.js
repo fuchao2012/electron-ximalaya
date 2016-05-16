@@ -22,8 +22,14 @@ bootbox.prompt({
     }
 });
 
+$(window).scroll(function () {
+    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+        alert("bottom!");
+    }
+});
+
 function loadAlbum(albumId) {
-    url = `http://mobile.ximalaya.com/mobile/others/album/track?albumId=${albumId}&pageId=1&pageSize=20`;
+    var url = `http://mobile.ximalaya.com/mobile/others/album/track?albumId=${albumId}&pageId=1&pageSize=20`;
     console.log(url);
     $.ajax(url, {
         dataType: 'json'
