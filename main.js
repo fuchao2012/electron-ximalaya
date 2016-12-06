@@ -11,10 +11,11 @@ let chooseAlbumWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 430, height: 600});
+  mainWindow = new BrowserWindow({width: 200, height: 100});
 
   // and load the index.html of the app.
-  mainWindow.loadURL(`file://${__dirname}/album.html`);
+  // mainWindow.loadURL(`file://${__dirname}/album.html`);
+  mainWindow.loadURL('http://www.ximalaya.com/zhubo/1412917');
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools();
